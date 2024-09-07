@@ -1,0 +1,446 @@
+/* MAIN CSS */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: arial, Sans-serif;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #181818;
+    color: white;
+    background-image: url("https://4kwallpapers.com/images/wallpapers/dark-background-abstract-background-network-3d-background-3840x2160-8324.png");
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    text-transform: capitalize;
+}
+
+
+/* SEARCH BAR */
+.search-form {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    border: 1px solid gray;
+}
+.search:focus {
+    outline: none;
+    border-color: white;
+}
+
+
+/* PAGINATION CSS */
+
+.paginator {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.paginator a {
+    border: 1px solid gray;
+    padding: 10px 50px;
+    cursor: pointer;
+}
+.paginator a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #181818;
+    transition: 0.3s;
+}
+
+
+/* BACK BUTTON CSS */
+
+.go-back {
+    position: absolute;
+    right: 70px;
+    top: 80px;
+    cursor: pointer;
+    color: white;
+}
+.go-back:hover {
+    transform: translateX(-10px);
+    transition: 0.2s;
+}
+
+
+/* NAVIGATION BAR CSS */
+
+nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 10px;
+}
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+nav ul a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid gray;
+    padding: 7px 20px;
+}
+nav ul a:hover {
+    background-color: gray;
+    transition: 0.2s;
+}
+
+
+.form-input {
+    min-width: 300px !important;
+}
+
+.password-requirements {
+    width: 350px;
+    font-size: 12px;
+    color: gray;
+    gap: 0;
+}
+
+.main-section {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.main-section:hover {
+    box-shadow: 0 0 5px white;
+    transition: 0.2s;
+}
+
+.main-section .auth-form {
+    width: 100%;
+}
+
+.main-section form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.main-section form label {
+    text-align: center;
+}
+.main-section h1 {
+    text-align: center;
+    margin-top: 0;
+}
+
+.main-section form input {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid gray;
+    min-width: 400px;
+    color: lightgray;
+    font-size: 16px;
+    padding: 10px 10px;
+    min-width: 200px;
+}
+
+.main-section form input[type="submit"] {
+    border: 1px solid white;
+}
+.main-section form input[type="submit"]:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: 0.2s;
+}
+
+.main-section a{
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.main-section a:after {
+    content: "Click here!";
+    text-decoration: underline;
+}
+
+.main-section form input:focus{
+    outline: none;
+    box-shadow: 0 0 5px white;
+}
+
+.content {
+    margin-top: 70px;
+    width: 80%;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blog {
+    width: 80%;
+    padding: 20px;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 0 10px black;
+    background-color: #2b2828;
+}
+.blog:hover {
+    box-shadow: 0 0 5px gray;
+}
+.blog h1 {
+    border-bottom: 1px solid gray;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+.blog .blog-date {
+    line-height: 25px;
+    color: gray;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.blog a {
+    color: lightgray;
+    text-decoration: none;
+}
+.blog .blog-desc {
+    color: rgb(239, 239, 239);
+    letter-spacing: 1px;
+}
+.blog .blog-author {
+    font-size: 18px;
+    color: gray;
+    font-style: italic;
+    float: right;
+    text-decoration: underline;
+}
+
+
+/* BLOG BUTTONS : LIKE, SHARE, COMMENT */
+
+.blog .blog-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.blog .blog-buttons .Button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: 1px solid gray;
+    padding: 10px 20px;
+    min-width: 100px;
+    text-align: center;
+    cursor: pointer;
+}
+.blog .blog-buttons button{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    color: white;
+}
+.blog .blog-buttons .Button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #181818;
+    transition: 0.3s;
+}
+.comment-Button{
+    float: right;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* COMMENT FORM INPUT */
+
+.comment-form {
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.comment-form input {
+    width: 100%;
+    background-color: rgba(0, 0 , 0, 0);
+    border: 1px solid gray;
+    border-radius: 2px;
+    font-size: 14px;
+    padding: 10px;
+    color: lightgray;
+}
+.comment-form input[type='submit']:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #181818;
+}
+
+.comment-form input[type="text"]:focus {
+    border-color: white;
+    outline: none;
+}
+.comment {
+    width: 80%;
+    background-color: #2b2828;
+    border: 1px solid gray;
+    padding: 5px;
+    margin-top: 10px;
+}
+.comment .comment-date {
+    font-size: 12px;
+    color: lightgray;
+    margin-bottom: 10px;
+}
+.comment .comment-body {
+    font-size: 16px;
+    color: white;
+    padding-left: 20px;
+}
+
+
+/* ALERT MESSAGE CSS */
+
+.alert {
+    z-index: 100;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.11);
+}
+.alert-danger {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+.alert-white {
+    background-image: linear-gradient(to bottom,#FFFFFF,#F9F9F9);
+    border-top-color: #d8d8d8;
+    border-bottom-color: #bdbdbd;
+    border-left-color: #cacaca;
+    border-right-color: #cacaca;
+    color: #404040;
+    padding-left: 61px;
+    position: absolute;
+    top: 20px;
+}
+.alert-white .icon {
+    text-align: center;
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border: 1px solid #bdbdbd;
+}
+.alert-white .icon:after {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border: 1px solid #bdbdbd;
+    position: absolute;
+    border-left: 0;
+    border-bottom: 0;
+    top: 50%;
+    right: -6px;
+    margin-top: -5px;
+    background: #fff;
+}
+.alert-white .icon svg {
+    transform: scale(1.2);
+    font-size: 20px;
+    color: #FFF;
+    left: calc(50% - 12px);
+    position: absolute;
+    margin-top: 0px;
+    top: calc(50% - 13px);
+    fill: white;
+}
+.alert-white.alert-danger .icon,.alert-white.alert-danger .icon:after {
+    border-color: #ca452e;
+    background: #da4932;
+}
+.alert-white.alert-success .icon,.alert-white.alert-success .icon:after {
+    border-color: #54a754;
+    background: #60c060;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
+.close:hover,.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: .5;
+}
+.hide-error {
+    visibility: hidden;
+}
+.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
