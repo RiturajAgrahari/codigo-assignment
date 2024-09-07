@@ -1,0 +1,17 @@
+{% extends 'pages/master.html' %}
+
+{% block title %}
+    Bexardo
+{% endblock %}
+
+{% block content %}
+    <h1>POST A BLOG</h1>
+    <form method="POST" class="designer-form">
+        {{ user.id }}
+        {% csrf_token %}
+            {{ post_form }}
+        <input type="text" name="author" value="{{ user.id }}" hidden>
+        <input type="submit" value="Post" class="designer-button">
+    </form>
+
+{% endblock %}

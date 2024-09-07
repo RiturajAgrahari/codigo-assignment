@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import LoginForm, CustomUserCreationForm
+from .forms import LoginForm, CustomUserCreationForm, BlogForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
@@ -167,6 +167,26 @@ def comment(request, id):
         return redirect(f"/blogs/{id}")
     else:
         return redirect("/")
+
+
+def post(request):
+    if request.method == "POST":
+        form = BlogForm(request.POST)
+
+
+        author = User.objects.all().filter(pk=request.POST["author"])[0]
+
+        incomplete_form = form.save(commit=False)
+        incomplete_form.author = author
+        incomplete_form.save()
+
+        return redirect("/")
+    else:
+        form = BlogForm()
+        context = {
+            "post_form": form
+        }
+        return render(request, template_name="pages/post.html", context=context)
 
 
 def login_view(request):
