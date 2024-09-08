@@ -171,14 +171,15 @@ def comment(request, id):
 
 def post(request):
     if request.method == "POST":
+        print(request.POST)
         form = BlogForm(request.POST)
-
 
         author = User.objects.all().filter(pk=request.POST["author"])[0]
 
         incomplete_form = form.save(commit=False)
         incomplete_form.author = author
         incomplete_form.save()
+        form.save_m2m()
 
         return redirect("/")
     else:
