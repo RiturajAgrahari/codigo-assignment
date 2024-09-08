@@ -19,7 +19,7 @@
                             </a>
                         {% endfor %}
                     </div>
-                    <a href="/blogs/{{ blog.id }}" class="blog-desc"> {{ blog.description }}</a>
+                    <div class="blog-desc"> {{ blog.description }}</div>
                     <a href="{% url 'author_blog' blog.author %}" class="blog-author"> {{ blog.author }}</a>
 
 

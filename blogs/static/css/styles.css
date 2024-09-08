@@ -248,6 +248,13 @@ nav ul li {
 .blog .blog-desc {
     color: rgb(239, 239, 239);
     letter-spacing: 1px;
+
+}
+.line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 .blog .blog-author {
     font-size: 18px;
@@ -255,6 +262,13 @@ nav ul li {
     font-style: italic;
     float: right;
     text-decoration: underline;
+}
+.blog .blog-read {
+    font-size: 18px;
+    color: gray;
+    font-style: italic;
+    float: left;
+    text-decoration: none;
 }
 
 
